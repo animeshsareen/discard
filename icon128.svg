@@ -1,0 +1,37 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main card -->
+  <rect x="16" y="32" width="96" height="64" rx="8" fill="url(#cardGradient)" stroke="#2980b9" stroke-width="2"/>
+  
+  <!-- Magnetic stripe -->
+  <rect x="20" y="40" width="88" height="6" fill="#34495e"/>
+  
+  <!-- Card details -->
+  <rect x="20" y="52" width="32" height="4" fill="#ecf0f1"/>
+  <rect x="20" y="60" width="40" height="4" fill="#ecf0f1"/>
+  <rect x="20" y="68" width="48" height="4" fill="#ecf0f1"/>
+  <rect x="20" y="76" width="52" height="4" fill="#ecf0f1"/>
+  
+  <!-- Chip -->
+  <circle cx="88" cy="72" r="8" fill="#f39c12"/>
+  <circle cx="88" cy="72" r="6" fill="#e67e22"/>
+  <circle cx="88" cy="72" r="4" fill="#d35400"/>
+  
+  <!-- Reward arrow -->
+  <path d="M64 12L80 28L64 44" stroke="#27ae60" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Reward stars -->
+  <g fill="#f1c40f">
+    <path d="M40 16l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/>
+    <path d="M88 16l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/>
+  </g>
+  
+  <!-- Brand text -->
+  <text x="64" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">SMART REWARDS</text>
+</svg>
