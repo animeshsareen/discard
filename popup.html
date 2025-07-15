@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Smart Card Rewards</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Smart Card Rewards</h1>
+    </header>
+    
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Analyzing current page...</p>
+    </div>
+    
+    <div id="merchant-info" class="merchant-info" style="display: none;">
+      <div class="merchant-header">
+        <h2 id="merchant-name"></h2>
+        <span id="merchant-category" class="category-badge"></span>
+      </div>
+    </div>
+    
+    <div id="recommendations" class="recommendations" style="display: none;">
+      <h3>Recommended Card</h3>
+      <div id="best-card" class="card-recommendation">
+        <!-- Best card will be inserted here -->
+      </div>
+      
+      <div id="other-cards" class="other-cards" style="display: none;">
+        <h4>Other Cards</h4>
+        <div id="other-cards-list">
+          <!-- Other cards will be inserted here -->
+        </div>
+      </div>
+    </div>
+    
+    <div id="no-merchant" class="no-merchant" style="display: none;">
+      <p>No spending page detected on this site.</p>
+    </div>
+    
+    <div id="no-cards" class="no-cards" style="display: none;">
+      <p>No credit cards configured.</p>
+      <button id="add-cards-btn" class="btn btn-primary">Add Credit Cards</button>
+    </div>
+    
+    <div id="card-management" class="card-management" style="display: none;">
+      <h3>Manage Credit Cards</h3>
+      <div id="cards-list">
+        <!-- Cards will be listed here -->
+      </div>
+      <button id="add-card-btn" class="btn btn-secondary">Add New Card</button>
+    </div>
+    
+    <div id="add-card-form" class="add-card-form" style="display: none;">
+      <h3>Add Credit Card</h3>
+      <form id="card-form">
+        <div class="form-group">
+          <label for="card-name">Card Name</label>
+          <input type="text" id="card-name" placeholder="e.g., Chase Sapphire Preferred" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="card-network">Network</label>
+          <select id="card-network" required>
+            <option value="">Select network</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="amex">American Express</option>
+            <option value="discover">Discover</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Reward Categories</label>
+          <div class="rewards-config">
+            <div class="reward-item">
+              <label>Dining</label>
+              <input type="number" id="dining-rate" placeholder="%" min="0" max="10" step="0.1">
+            </div>
+            <div class="reward-item">
+              <label>Gas</label>
+              <input type="number" id="gas-rate" placeholder="%" min="0" max="10" step="0.1">
+            </div>
+            <div class="reward-item">
+              <label>Groceries</label>
+              <input type="number" id="groceries-rate" placeholder="%" min="0" max="10" step="0.1">
+            </div>
+            <div class="reward-item">
+              <label>Travel</label>
+              <input type="number" id="travel-rate" placeholder="%" min="0" max="10" step="0.1">
+            </div>
+            <div class="reward-item">
+              <label>Online Shopping</label>
+              <input type="number" id="online-rate" placeholder="%" min="0" max="10" step="0.1">
+            </div>
+            <div class="reward-item">
+              <label>Other</label>
+              <input type="number" id="other-rate" placeholder="%" min="0" max="10" step="0.1">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save Card</button>
+          <button type="button" id="cancel-add" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="footer">
+      <button id="manage-cards-btn" class="btn btn-link">Manage Cards</button>
+    </div>
+  </div>
+  
+  <script src="storage.js"></script>
+  <script src="rewards.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
